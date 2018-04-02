@@ -1,0 +1,276 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+  <meta name="format-detection" content="telephone=no,email=no"/>
+  <link rel="stylesheet" href="css/amazeui.min.css"/>
+  <link rel="stylesheet" href="css/admin.css">
+  <title>快邮快查－－后台管理平台</title>
+</head>
+<body>
+  <div class="am-cf admin-main">
+    <!-- sidebar start -->
+    <div class="admin-sidebar am-offcanvas am-lfTxt" id="admin-offcanvas">
+      <div class="am-offcanvas-bar admin-offcanvas-bar">
+        <div class="am-img">
+          <img src="img/logo.png"/>
+        </div>
+        <ul class="am-list admin-sidebar-list">
+          <li class="admin-parent">
+            <ul class="am-list am-collapse am-in" id="collapse-nav">
+              <li><a href="index.html" class="am-cf"><span class="icon-gs am-icon-envelope"></span>公司信息管理</a></li>
+              <li><a href="tbPro.html" class="am-cf"><span class="icon-cp am-icon-tag"></span>产品服务管理</a></li>
+              <li><a href="tbWeb.html" class="am-cf"><span class="icon-wd am-icon-location-arrow"></span>网点管理</a></li>
+              <li><a href="tbTake.html" class="am-cf"><span class="icon-qj am-icon-truck"></span>取件范围管理</a></li>
+              <li><a href="tbAsk.html" class="am-cf"><span class="icon-zx am-icon-comment"></span>咨询信息</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div id="time" class="am-fl am-cf am-rtBtxt"></div>
+        <div class="am-bb">版本 1.0.0</div>
+      </div>
+    </div>
+    <!-- sidebar end -->
+    <!-- content start -->
+    <div class="admin-content">
+      <div class="admin-content-body">
+        <div class="am-cf am-padding am-padding-bottom-0 am-rtBt">
+          <div class="am-fl am-cf am-rtBtxt"><strong class="am-text-default am-text-lg">公司信息管理</strong> / <small class="am-sm">Company Information Management</small></div>
+          <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+            <ul class="am-nav  am-topbar-nav am-topbar-right ">
+              <li class="am-out">
+                <a href="http://www.baidu.com">
+                  <span class="am-icon-power-off"></span> 退出系统
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="am-g">
+        <div class="am-u-sm-12 am-u-md-8">
+            <form class="am-form am-form-horizontal am-fm">
+              <div class="am-com">
+                <div class="am-gs lf">
+                  <!--公司名称-->
+                  <div class="am-form-group">
+                    <label class="am-u-sm-3 am-form-label am-lb1">公司名称：</label>
+                    <div class="am-u-sm-9">
+                      <input type="text">
+                      <small class="success error">这里不能为空</small>
+                    </div>
+                  </div>
+                  <!--公司简称-->
+                  <div class="am-form-group">
+                    <label class="am-u-sm-3 am-form-label am-lb1">公司简称：</label>
+                    <div class="am-u-sm-9">
+                      <input type="text">
+                      <small class="success error">这里不能为空</small>
+                    </div>
+                  </div>
+                  <!--英文名称-->
+                  <div class="am-form-group">
+                    <label class="am-u-sm-3 am-form-label am-lb1">英文名称：</label>
+                    <div class="am-u-sm-9">
+                      <input type="text">
+                      <small class="success error">这里不能为空</small>
+                    </div>
+                  </div>
+                  <!--固定电话-->
+                  <div class="am-form-group">
+                    <label class="am-u-sm-3 am-form-label am-lb1">固定电话：</label>
+                    <div class="am-u-sm-9">
+                      <input type="text">
+                      <small class="success error">这里不能为空</small>
+                    </div>
+                  </div>
+                  <!--详细地址-->
+                  <div class="am-form-group">
+                    <label class="am-u-sm-3 am-form-label am-lb1">详细地址：</label>
+                    <div class="am-u-sm-9">
+                      <input type="text">
+                      <small class="success error">这里不能为空</small>
+                    </div>
+                  </div>
+                  <!--公司LOGO-->
+                  <div class="am-form-group">
+                    <label class="am-u-sm-3 am-form-label am-lb1">公司LOGO：</label>
+                    <div class="am-u-sm-9">
+                      <p>
+                        <img src="img/baidu.png" style="width: 80px;height: 80px"/>
+                      </p>
+                      <small class="success error">这里不能为空</small>
+                    </div>
+                  </div>
+                  <!--公司简介-->
+                  <div class="am-form-group">
+                    <label class="am-u-sm-3 am-form-label am-lb1">公司简介：</label>
+                    <div class="am-u-sm-9">
+                      <textarea cols="30" rows="6"></textarea>
+                      <small class="success error">这里不能为空</small>
+                    </div>
+                  </div>
+                  <!--通过公司认证-->
+                  <div class="am-form-group">
+                    <label class="am-u-sm-3 am-form-labe am-lb4 am-rz">通过公司认证：</label>
+                    <div class="am-u-sm-9">
+                      <select disabled>
+                        <option>未通过</option>
+                      </select>
+                      <small class="success error">这里不能为空</small>
+                    </div>
+                  </div>
+                  <!--上传公司LOGO路径-->
+                  <div class="am-form-group">
+                    <label class="am-u-sm-3 am-form-label am-lb4">上传公司LOGO路径：</label>
+                    <div class="am-u-sm-9">
+                      <div class="am-form-group am-form-file am-seeUp">
+                        <div class="am-file">
+                          <button type="button" class="am-btn am-btn-danger am-btn-sm am-see">
+                            <i class="am-icon-folder-open"></i> 浏览
+                          </button>
+                          <button type="button" class="am-btn am-btn-danger am-btn-sm am-up">
+                            <i class="am-icon-cloud-upload"></i> 上传
+                          </button>
+                          <input class="doc-form-file" type="file" multiple>
+                        </div>
+                        <div class="file-list am-files"></div>
+                      </div>
+                      <small>建议图片尺寸为120*120像素，且文件大小不超过2M，支持格式：JPG/PNG/GIF</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="am-lxr lf">
+                  <!--联系人-->
+                  <div class="am-form-group">
+                    <label class="am-u-sm-3 am-form-label am-lb2">联系人：</label>
+                    <div class="am-u-sm-9">
+                      <input type="text">
+                      <small class="success error">这里不能为空</small>
+                    </div>
+                  </div>
+                  <!--微信-->
+                  <div class="am-form-group">
+                    <label class="am-u-sm-3 am-form-label am-lb2">微信：</label>
+                    <div class="am-u-sm-9">
+                      <input type="text">
+                      <small class="success error">这里不能为空</small>
+                    </div>
+                  </div>
+                  <!--手机-->
+                  <div class="am-form-group">
+                    <label class="am-u-sm-3 am-form-label am-lb2">手机：</label>
+                    <div class="am-u-sm-9">
+                      <input type="text">
+                      <small class="success error">这里不能为空</small>
+                    </div>
+                  </div>
+                  <!--QQ-->
+                  <div class="am-form-group">
+                    <label class="am-u-sm-3 am-form-label am-lb2">QQ：</label>
+                    <div class="am-u-sm-9">
+                      <input type="text">
+                      <small class="success error">这里不能为空</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="am-dq lf">
+                  <!--国家-->
+                  <div class="am-form-group">
+                    <label class="am-u-sm-3 am-form-label am-lb3">国家：</label>
+                    <div class="am-u-sm-9">
+                      <input type="text"/>
+                      <small class="success error">这里不能为空</small>
+                    </div>
+                  </div>
+                  <!--省-->
+                  <div class="am-form-group">
+                    <label class="am-u-sm-3 am-form-label am-lb3">省：</label>
+                    <div class="am-u-sm-9">
+                      <input type="text"/>
+                      <small class="success error">这里不能为空</small>
+                    </div>
+                  </div>
+                  <!--城市-->
+                  <div class="am-form-group">
+                    <label class="am-u-sm-3 am-form-label am-lb3">城市：</label>
+                    <div class="am-u-sm-9">
+                      <input type="text"/>
+                      <small class="success error">这里不能为空</small>
+                    </div>
+                  </div>
+                  <!--入驻快邮在线-->
+                  <div class="am-form-group">
+                    <label class="am-u-sm-3 am-form-label am-lb4">入驻快邮在线：</label>
+                    <div class="am-u-sm-9">
+                      <select>
+                        <option>否</option>
+                        <option>是</option>
+                      </select>
+                      <small class="success error">这里不能为空</small>
+                    </div>
+                  </div>
+                  <!--快邮在线入驻ID-->
+                  <div class="am-form-group">
+                    <label class="am-u-sm-3 am-form-label am-lb4 am-id">快邮在线入驻ID：</label>
+                    <div class="am-u-sm-9 am-kyId">
+                      <input type="text" disabled/>
+                      <small class="success error">这里不能为空</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="am-qt lf">
+                  <!--审核状态-->
+                  <div class="am-form-group am-qtSh">
+                    <label class="am-u-sm-3 am-form-label am-lb4 am-kySh">审核状态：</label>
+                    <div class="am-u-sm-9 am-sh">
+                      <select>
+                        <option>未审核</option>
+                      </select>
+                      <small class="success error">这里不能为空</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="am-cmBtns">
+                  <!--提交审核、确定、取消-->
+                  <div class="am-form-group">
+                    <div class="am-u-sm-9 am-u-sm-push-3 am-cmGp">
+                      <button type="submit" class="am-btn am-btn-primary">提交审核</button>
+                      <button type="submit" class="am-btn am-btn-success">保存</button>
+                      <button type="submit" class="am-btn am-btn-danger">取消</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+      </div>
+      </div>
+      <footer class="admin-content-footer">
+        <hr>
+        <p class="am-padding-left">© 2016 快邮口岸技术支持</p>
+      </footer>
+    </div>
+    <!-- content end -->
+  </div>
+  <script src="js/jquery-1.11.3.js"></script>
+  <script src="js/amazeui.min.js"></script>
+  <script src="js/page.js"></script>
+  <script type="text/javascript">
+    /*浏览和上传*/
+    $(function() {
+      $('.doc-form-file').on('change', function() {
+        var fileNames = '';
+        $.each(this.files, function() {
+          fileNames += '<span class="am-badge">' + this.name + '</span> ';
+        });
+        $('.file-list').html(fileNames);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,385 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+  <meta name="format-detection" content="telephone=no,email=no"/>
+  <link rel="stylesheet" href="css/amazeui.min.css"/>
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="css/pageNum.css">
+  <title>快邮快查－－后台管理平台</title>
+</head>
+<body>
+  <div class="am-cf admin-main">
+    <!-- sidebar start -->
+    <div class="admin-sidebar am-offcanvas am-lfTxt" id="admin-offcanvas">
+      <div class="am-offcanvas-bar admin-offcanvas-bar">
+        <div class="am-img">
+          <img src="img/logo.png"/>
+        </div>
+        <ul class="am-list admin-sidebar-list">
+          <li class="admin-parent">
+            <ul class="am-list am-collapse am-in" id="collapse-nav">
+              <li><a href="index.html" class="am-cf"><span class="icon-gs am-icon-envelope"></span>公司信息管理</a></li>
+              <li><a href="tbPro.html" class="am-cf"><span class="icon-cp am-icon-tag"></span>产品服务管理</a></li>
+              <li><a href="tbWeb.html" class="am-cf"><span class="icon-wd am-icon-location-arrow"></span>网点管理</a></li>
+              <li><a href="tbTake.html" class="am-cf"><span class="icon-qj am-icon-truck"></span>取件范围管理</a></li>
+              <li><a href="tbAsk.html" class="am-cf"><span class="icon-zx am-icon-comment"></span>咨询信息</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="am-bb">版本 1.0.0</div>
+      </div>
+    </div>
+    <!-- sidebar end -->
+    <!-- content start -->
+    <div class="admin-content">
+      <div class="admin-content-body">
+        <div class="am-cf am-padding am-padding-bottom-0 am-rtBt">
+          <div class="am-fl am-cf am-rtBtxt"><strong class="am-text-default am-text-lg">网点管理</strong> / <small class="am-sm">Network Management</small></div>
+          <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+            <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
+              <li class="am-out">
+                <a href="http://www.baidu.com" class="am-dropdown-toggle">
+                  <span class="am-icon-dot-circle-o"></span> 退出系统
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="am-g">
+          <div class="am-u-sm-12">
+            <form class="am-form am-tb">
+              <div class="am-g">
+                <div class="am-u-sm-12">
+                  <div class="am-btn-toolbar am-bt">
+                    <div class="am-btn-group am-btn-group-xs">
+                      <button type="button" class="am-btn am-btn-default am-addCp" onclick="javascrtpt:window.location.href='netManage.html'">
+                        <span class="am-icon-plus"></span>添加产品
+                      </button>
+                      <button type="button" class="am-btn am-btn-default am-addCp am-delete">
+                        <span class="am-icon-close"></span> 删除
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="am-u-sm-12 am-dp">
+                  <div class="am-form-group">
+                    <div class="am-fmSpan lf am-wdm">
+                      <div class="am-input-group">
+                        <span class="am-input-group-label">按网店名称</span>
+                        <input type="text" class="am-form-field" placeholder="请输入网店名称">
+                      </div>
+                    </div>
+                    <div class="am-fmSpan lf">
+                      <span class="am-jck am-fw">按审核状态</span>
+                      <select data-am-selected="{btnSize: 'sm'}">
+                        <option>---请选择---</option>
+                        <option>未审核</option>
+                        <option>审核通过</option>
+                        <option>审核未通过</option>
+                      </select>
+                    </div>
+                    <div class="am-btn-toolbar">
+                      <div class="am-btn-group am-btn-group-xs">
+                        <button class="am-ss am-btn am-btn-default am-btn-xs am-text-secondary am-xg"><span class="am-icon-search"></span> 搜索</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <table class="am-table am-table-striped am-table-hover table-main am-text-nowrap am-scrollable-horizontal">
+                <thead>
+                <tr>
+                  <th class="table-check">
+                    <input type="checkbox" name="allChecked" id="allChecked" onclick="DoCheck()"/>
+                  </th>
+                  <th class="table-title">网点名称</th>
+                  <th class="table-type">营业时间</th>
+                  <th class="table-author am-hide-sm-only">电话</th>
+                  <th class="table-date am-hide-sm-only">其他说明</th>
+                  <th class="table-title">审核状态</th>
+                  <th class="table-set">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="checkbox" name="wp"/></td>
+                    <td>快邮口岸</td>
+                    <td>9:00-18:00</td>
+                    <td class="am-hide-sm-only">0755-83765566</td>
+                    <td class="am-hide-sm-only">请输入备注信息</td>
+                    <td>未审核</td>
+                    <td>
+                      <div class="am-btn-toolbar">
+                        <div class="am-btn-group am-btn-group-xs">
+                          <button class="am-btn am-btn-default am-btn-xs am-text-secondary am-xg"><span class="am-icon-pencil-square-o"></span>修改</button>
+                        </div>
+                      </div>
+                    </td>
+                </tr>
+                  <tr>
+                    <td><input type="checkbox" name="wp"/></td>
+                    <td>快邮口岸</td>
+                    <td>9:00-18:00</td>
+                    <td class="am-hide-sm-only">0755-83765566</td>
+                    <td class="am-hide-sm-only">请输入备注信息</td>
+                    <td>未审核</td>
+                    <td>
+                      <div class="am-btn-toolbar">
+                        <div class="am-btn-group am-btn-group-xs">
+                          <button class="am-btn am-btn-default am-btn-xs am-text-secondary am-xg"><span class="am-icon-pencil-square-o"></span>修改</button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="wp"/></td>
+                    <td>快邮口岸</td>
+                    <td>9:00-18:00</td>
+                    <td class="am-hide-sm-only">0755-83765566</td>
+                    <td class="am-hide-sm-only">请输入备注信息</td>
+                    <td>未审核</td>
+                    <td>
+                      <div class="am-btn-toolbar">
+                        <div class="am-btn-group am-btn-group-xs">
+                          <button class="am-btn am-btn-default am-btn-xs am-text-secondary am-xg"><span class="am-icon-pencil-square-o"></span>修改</button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="wp"/></td>
+                    <td>快邮口岸</td>
+                    <td>9:00-18:00</td>
+                    <td class="am-hide-sm-only">0755-83765566</td>
+                    <td class="am-hide-sm-only">请输入备注信息</td>
+                    <td>未审核</td>
+                    <td>
+                      <div class="am-btn-toolbar">
+                        <div class="am-btn-group am-btn-group-xs">
+                          <button class="am-btn am-btn-default am-btn-xs am-text-secondary am-xg"><span class="am-icon-pencil-square-o"></span>修改</button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="wp"/></td>
+                    <td>快邮口岸</td>
+                    <td>9:00-18:00</td>
+                    <td class="am-hide-sm-only">0755-83765566</td>
+                    <td class="am-hide-sm-only">请输入备注信息</td>
+                    <td>未审核</td>
+                    <td>
+                      <div class="am-btn-toolbar">
+                        <div class="am-btn-group am-btn-group-xs">
+                          <button class="am-btn am-btn-default am-btn-xs am-text-secondary am-xg"><span class="am-icon-pencil-square-o"></span>修改</button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="wp"/></td>
+                    <td>快邮口岸</td>
+                    <td>9:00-18:00</td>
+                    <td class="am-hide-sm-only">0755-83765566</td>
+                    <td class="am-hide-sm-only">请输入备注信息</td>
+                    <td>未审核</td>
+                    <td>
+                      <div class="am-btn-toolbar">
+                        <div class="am-btn-group am-btn-group-xs">
+                          <button class="am-btn am-btn-default am-btn-xs am-text-secondary am-xg"><span class="am-icon-pencil-square-o"></span>修改</button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="wp"/></td>
+                    <td>快邮口岸</td>
+                    <td>9:00-18:00</td>
+                    <td class="am-hide-sm-only">0755-83765566</td>
+                    <td class="am-hide-sm-only">请输入备注信息</td>
+                    <td>未审核</td>
+                    <td>
+                      <div class="am-btn-toolbar">
+                        <div class="am-btn-group am-btn-group-xs">
+                          <button class="am-btn am-btn-default am-btn-xs am-text-secondary am-xg"><span class="am-icon-pencil-square-o"></span>修改</button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="wp"/></td>
+                    <td>快邮口岸</td>
+                    <td>9:00-18:00</td>
+                    <td class="am-hide-sm-only">0755-83765566</td>
+                    <td class="am-hide-sm-only">请输入备注信息</td>
+                    <td>未审核</td>
+                    <td>
+                      <div class="am-btn-toolbar">
+                        <div class="am-btn-group am-btn-group-xs">
+                          <button class="am-btn am-btn-default am-btn-xs am-text-secondary am-xg"><span class="am-icon-pencil-square-o"></span>修改</button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="wp"/></td>
+                    <td>快邮口岸</td>
+                    <td>9:00-18:00</td>
+                    <td class="am-hide-sm-only">0755-83765566</td>
+                    <td class="am-hide-sm-only">请输入备注信息</td>
+                    <td>未审核</td>
+                    <td>
+                      <div class="am-btn-toolbar">
+                        <div class="am-btn-group am-btn-group-xs">
+                          <button class="am-btn am-btn-default am-btn-xs am-text-secondary am-xg"><span class="am-icon-pencil-square-o"></span>修改</button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="wp"/></td>
+                    <td>快邮口岸</td>
+                    <td>9:00-18:00</td>
+                    <td class="am-hide-sm-only">0755-83765566</td>
+                    <td class="am-hide-sm-only">请输入备注信息</td>
+                    <td>未审核</td>
+                    <td>
+                      <div class="am-btn-toolbar">
+                        <div class="am-btn-group am-btn-group-xs">
+                          <button class="am-btn am-btn-default am-btn-xs am-text-secondary am-xg"><span class="am-icon-pencil-square-o"></span>修改</button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="wp"/></td>
+                    <td>快邮口岸</td>
+                    <td>9:00-18:00</td>
+                    <td class="am-hide-sm-only">0755-83765566</td>
+                    <td class="am-hide-sm-only">请输入备注信息</td>
+                    <td>未审核</td>
+                    <td>
+                      <div class="am-btn-toolbar">
+                        <div class="am-btn-group am-btn-group-xs">
+                          <button class="am-btn am-btn-default am-btn-xs am-text-secondary am-xg"><span class="am-icon-pencil-square-o"></span>修改</button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="wp"/></td>
+                    <td>快邮口岸</td>
+                    <td>9:00-18:00</td>
+                    <td class="am-hide-sm-only">0755-83765566</td>
+                    <td class="am-hide-sm-only">请输入备注信息</td>
+                    <td>未审核</td>
+                    <td>
+                      <div class="am-btn-toolbar">
+                        <div class="am-btn-group am-btn-group-xs">
+                          <button class="am-btn am-btn-default am-btn-xs am-text-secondary am-xg"><span class="am-icon-pencil-square-o"></span>修改</button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="wp"/></td>
+                    <td>快邮口岸</td>
+                    <td>9:00-18:00</td>
+                    <td class="am-hide-sm-only">0755-83765566</td>
+                    <td class="am-hide-sm-only">请输入备注信息</td>
+                    <td>未审核</td>
+                    <td>
+                      <div class="am-btn-toolbar">
+                        <div class="am-btn-group am-btn-group-xs">
+                          <button class="am-btn am-btn-default am-btn-xs am-text-secondary am-xg"><span class="am-icon-pencil-square-o"></span>修改</button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="wp"/></td>
+                    <td>快邮口岸</td>
+                    <td>9:00-18:00</td>
+                    <td class="am-hide-sm-only">0755-83765566</td>
+                    <td class="am-hide-sm-only">请输入备注信息</td>
+                    <td>未审核</td>
+                    <td>
+                      <div class="am-btn-toolbar">
+                        <div class="am-btn-group am-btn-group-xs">
+                          <button class="am-btn am-btn-default am-btn-xs am-text-secondary am-xg"><span class="am-icon-pencil-square-o"></span>修改</button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="wp"/></td>
+                    <td>快邮口岸</td>
+                    <td>9:00-18:00</td>
+                    <td class="am-hide-sm-only">0755-83765566</td>
+                    <td class="am-hide-sm-only">请输入备注信息</td>
+                    <td>未审核</td>
+                    <td>
+                      <div class="am-btn-toolbar">
+                        <div class="am-btn-group am-btn-group-xs">
+                          <button class="am-btn am-btn-default am-btn-xs am-text-secondary am-xg"><span class="am-icon-pencil-square-o"></span>修改</button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="pagin_left">
+                <span>共<b id="totalPage">1</b>页</span>,
+                <span>共<b id="totalRecord">15</b>条</span>，
+                <span>当前为第<b id="pageIndex">1</b>页</span>，
+                <span>每页
+                  <select id="recordCount" class="form-control am-sel">
+                    <option selected="selected">50</option>
+                    <option>100</option>
+                    <option>200</option>
+                    <option>500</option>
+                  </select>条
+                </span>
+              </div>
+              <div class="pagin_pg lf">
+                <ul class="am-pagination">
+                  <li class="am-disabled"><a href="#">« 上一页</a></li>
+                  <li class="am-active"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li class="am-disabled"><a href="#">下一页 »</a></li>
+                </ul>
+              </div>
+              <div class="pagin_rt rt">
+                <span>
+                  跳转到
+                  <input class="am-tzd" type="text"/>
+                </span>
+                <span>页</span>
+                <span>
+                  <input class="am-btnTz" type="button" value="跳 转"/>
+                </span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <footer class="admin-content-footer">
+        <hr>
+        <p class="am-padding-left">© 2016 快邮口岸技术支持</p>
+      </footer>
+    </div>
+    <!-- content end -->
+  </div>
+  <script src="js/jquery-1.11.3.js"></script>
+  <script src="js/amazeui.min.js"></script>
+  <script src="js/page.js"></script>
+</body>
+</html>

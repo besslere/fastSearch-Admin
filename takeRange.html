@@ -1,0 +1,140 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+  <meta name="format-detection" content="telephone=no,email=no"/>
+  <link rel="stylesheet" href="css/amazeui.min.css"/>
+  <link rel="stylesheet" href="css/admin.css">
+  <title>快邮快查－－后台管理平台</title>
+</head>
+<body>
+  <div class="am-cf admin-main">
+    <!-- sidebar start -->
+    <div class="admin-sidebar am-offcanvas am-lfTxt" id="admin-offcanvas">
+      <div class="am-offcanvas-bar admin-offcanvas-bar">
+        <div class="am-img">
+          <img src="img/logo.png"/>
+        </div>
+        <ul class="am-list admin-sidebar-list">
+          <li class="admin-parent">
+            <ul class="am-list am-collapse am-in" id="collapse-nav">
+              <li><a href="index.html" class="am-cf"><span class="icon-gs am-icon-envelope"></span>公司信息管理</a></li>
+              <li><a href="tbPro.html" class="am-cf"><span class="icon-cp am-icon-tag"></span>产品服务管理</a></li>
+              <li><a href="tbWeb.html" class="am-cf"><span class="icon-wd am-icon-location-arrow"></span>网点管理</a></li>
+              <li><a href="tbTake.html" class="am-cf"><span class="icon-qj am-icon-truck"></span>取件范围管理</a></li>
+              <li><a href="tbAsk.html" class="am-cf"><span class="icon-zx am-icon-comment"></span>咨询信息</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="am-bb">版本 1.0.0</div>
+      </div>
+    </div>
+    <!-- sidebar end -->
+    <!-- content start -->
+    <div class="admin-content">
+      <div class="am-bjInfo">
+        <div>编辑取件范围 / <small>Edit Fetch Range</small></div>
+      </div>
+      <div class="am-g">
+        <div class="am-u-sm-12 am-u-md-8">
+          <form class="am-form am-form-horizontal am-fm">
+            <div class="am-take">
+              <div class="am-takeDq lf">
+                <!--国家-->
+                <div class="am-form-group">
+                  <label class="am-u-sm-3 am-form-label am-tkLb">国家：</label>
+                  <div class="am-u-sm-9">
+                    <input type="text"/>
+                    <small class="success error">这里不能为空</small>
+                  </div>
+                </div>
+                <!--省-->
+                <div class="am-form-group">
+                  <label class="am-u-sm-3 am-form-label am-tkLb">省：</label>
+                  <div class="am-u-sm-9">
+                    <input type="text"/>
+                    <small class="success error">这里不能为空</small>
+                  </div>
+                </div>
+                <!--城市-->
+                <div class="am-form-group">
+                  <label class="am-u-sm-3 am-form-label am-tkLb">城市：</label>
+                  <div class="am-u-sm-9">
+                    <input type="text"/>
+                    <small class="success error">这里不能为空</small>
+                  </div>
+                </div>
+                <!--审核状态-->
+                <div class="am-form-group">
+                  <label class="am-u-sm-3 am-form-label am-tkLb">审核状态：</label>
+                  <div class="am-u-sm-9">
+                    <select disabled>
+                      <option>未审核</option>
+                    </select>
+                    <small class="success error">这里不能为空</small>
+                  </div>
+                </div>
+              </div>
+              <div class="am-takeInfo lf">
+                <!--取件要求-->
+                <div class="am-form-group">
+                  <label class="am-u-sm-3 am-form-label am-tkLb">取件要求：</label>
+                  <div class="am-u-sm-9">
+                    <input type="text">
+                    <small class="success error">这里不能为空</small>
+                  </div>
+                </div>
+                <!--取件时间-->
+                <div class="am-form-group">
+                  <label class="am-u-sm-3 am-form-label am-tkLb">取件时间：</label>
+                  <div class="am-u-sm-9">
+                    <input type="text">
+                    <small class="success error">这里不能为空</small>
+                  </div>
+                </div>
+                <!--取件电话-->
+                <div class="am-form-group">
+                  <label class="am-u-sm-3 am-form-label am-tkLb">取件电话：</label>
+                  <div class="am-u-sm-9">
+                    <input type="text">
+                    <small class="success error">这里不能为空</small>
+                  </div>
+                </div>
+                <!--其它说明-->
+                <div class="am-form-group">
+                  <label class="am-u-sm-3 am-form-label am-tkLb">其它说明：</label>
+                  <div class="am-u-sm-9">
+                    <input type="text">
+                    <small class="success error">这里不能为空</small>
+                  </div>
+                </div>
+              </div>
+              <div class="am-tkBtns">
+                <!--确定、取消-->
+                <div class="am-form-group">
+                  <div class="am-u-sm-9 am-u-sm-push-3 am-tkGp">
+                    <button type="submit" class="am-btn am-btn-success">保存</button>
+                    <button type="submit" class="am-btn am-btn-danger">取消</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <footer class="admin-content-footer">
+        <hr>
+        <p class="am-padding-left">© 2016 快邮口岸技术支持</p>
+      </footer>
+    </div>
+    <!-- content end -->
+  </div>
+  <script src="js/jquery-1.11.3.js"></script>
+  <script src="js/amazeui.min.js"></script>
+  <script src="js/page.js"></script>
+</body>
+</html>

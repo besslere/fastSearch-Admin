@@ -1,0 +1,35 @@
+.am-com{
+    margin-top:30px;
+}
+.am-g .am-cmBtns .am-cmGp {
+    left: 35%;
+}
+.am-g form {
+    padding: 40px 25px 30px 25px;
+}
+.am-coms input{
+    border: none !important;
+    background: #fff !important;
+}
+.am-g .am-fm {
+    height: 370px;
+}
+.am-hg{
+    height: 460px !important;
+}
+.am-fms{
+    overflow: hidden;
+    border-bottom: 2px solid #f5f5f5;
+}
+.am-fms input{
+    float: right;
+    outline: none;
+    background: #000;
+    border: none;
+    color: #fff;
+    padding: 5px 8px;
+}
+.am-fms h1{
+    width: 700px;
+    float: left;
+}

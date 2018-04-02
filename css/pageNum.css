@@ -1,0 +1,13 @@
+.pagin_left {
+    float: left;
+    height: 64px;
+    line-height: 65px;
+    margin-right: 20%;
+}
+.am-sel{
+    width: 80px !important;
+    display: inherit !important;
+}
+.am-pagination {
+    position: inherit;
+}

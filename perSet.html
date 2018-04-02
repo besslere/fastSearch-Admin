@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+  <meta name="format-detection" content="telephone=no,email=no"/>
+  <link rel="stylesheet" href="css/amazeui.min.css"/>
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="css/person.css">
+  <title>快邮快查－－后台管理平台</title>
+</head>
+<body>
+  <div class="am-cf admin-main">
+    <!-- sidebar start -->
+    <div class="admin-sidebar am-offcanvas am-lfTxt" id="admin-offcanvas">
+      <div class="am-offcanvas-bar admin-offcanvas-bar">
+        <div class="am-img">
+          <img src="img/logo.png"/>
+        </div>
+        <ul class="am-list admin-sidebar-list">
+          <li class="admin-parent">
+            <ul class="am-list am-collapse am-in" id="collapse-nav">
+              <li><a href="perSet.html" class="am-cf"><span class="icon-gs am-icon-envelope"></span>个人信息管理</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div id="time" class="am-fl am-cf am-rtBtxt"></div>
+        <div class="am-bb">版本 1.0.0</div>
+      </div>
+    </div>
+    <!-- sidebar end -->
+    <!-- content start -->
+    <div class="admin-content">
+      <div class="admin-content-body">
+        <div class="am-cf am-padding am-padding-bottom-0 am-rtBt">
+          <div class="am-fl am-cf am-rtBtxt"><strong class="am-text-default am-text-lg">个人信息管理</strong> / <small class="am-sm">Person Information Management</small></div>
+          <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+            <ul class="am-nav  am-topbar-nav am-topbar-right ">
+              <li class="am-out">
+                <a href="http://www.baidu.com">
+                  <span class="am-icon-power-off"></span> 退出系统
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="am-g">
+          <div class="am-u-sm-12 am-u-md-8">
+            <form class="am-form am-form-horizontal am-fm">
+              <div class="am-fms">
+                <h1>个人信息</h1>
+                <input type="button" value="修改"/>
+              </div>
+              <div class="am-com am-coms">
+                <div class="am-gs lf">
+                  <!--姓名-->
+                  <div class="am-form-group">
+                    <label class="am-u-sm-3 am-form-label am-lb1">姓名：</label>
+                    <div class="am-u-sm-9">
+                      <input type="text" value="快邮口岸" disabled>
+                    </div>
+                  </div>
+                  <!--年龄-->
+                  <div class="am-form-group">
+                    <label class="am-u-sm-3 am-form-label am-lb1">年龄：</label>
+                    <div class="am-u-sm-9">
+                      <input type="text" value="20" maxlength="3" disabled>
+                    </div>
+                  </div>
+                  <!--籍贯-->
+                  <div class="am-form-group">
+                    <label class="am-u-sm-3 am-form-label am-lb1">籍贯：</label>
+                    <div class="am-u-sm-9">
+                      <input type="text" value="广东深圳" disabled>
+                    </div>
+                  </div>
+                  <!--职位-->
+                  <div class="am-form-group">
+                    <label class="am-u-sm-3 am-form-label am-lb2">职位：</label>
+                    <div class="am-u-sm-9">
+                      <input type="text" value="CEO" disabled>
+                    </div>
+                  </div>
+                </div>
+                <div class="am-lxr lf">
+                  <!--微信-->
+                  <div class="am-form-group">
+                    <label class="am-u-sm-3 am-form-label am-lb2">微信：</label>
+                    <div class="am-u-sm-9">
+                      <input type="text" value="AAAAAA" disabled>
+                    </div>
+                  </div>
+                  <!--手机-->
+                  <div class="am-form-group">
+                    <label class="am-u-sm-3 am-form-label am-lb2">手机：</label>
+                    <div class="am-u-sm-9">
+                      <input type="text" value="13588888888" disabled>
+                    </div>
+                  </div>
+                  <!--QQ-->
+                  <div class="am-form-group">
+                    <label class="am-u-sm-3 am-form-label am-lb2">QQ：</label>
+                    <div class="am-u-sm-9">
+                      <input type="text" value="123456" disabled>
+                    </div>
+                  </div>
+                  <!--通讯地址-->
+                  <div class="am-form-group">
+                    <label class="am-u-sm-3 am-form-label am-lb2">通讯地址：</label>
+                    <div class="am-u-sm-9">
+                      <input type="text" value="深圳市某某区某某路某某大厦20楼" disabled>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+      </div>
+      </div>
+      <footer class="admin-content-footer">
+        <hr>
+        <p class="am-padding-left">© 2016 快邮口岸技术支持</p>
+      </footer>
+    </div>
+    <!-- content end -->
+  </div>
+  <script src="js/jquery-1.11.3.js"></script>
+  <script src="js/amazeui.min.js"></script>
+  <script src="js/person.js"></script>
+</body>
+</html>
